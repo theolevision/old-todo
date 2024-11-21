@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module'; // Configurações de rotas
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, // Componente principal
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, // Rotas
+    HttpClientModule, // Requisições HTTP
   ],
-  providers: [
-    provideClientHydration(withEventReplay())
-  ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent], // Inicializa o AppComponent
 })
-export class AppModule { }
+export class AppModule {}

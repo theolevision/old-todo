@@ -1,0 +1,13 @@
+<div class="movies-container">
+    <h1 class="title">Star Wars Movies</h1>
+    <ul class="movies-list">
+      <li *ngFor="let movie of movies" class="movie-item">
+        <div class="movie-card">
+          <h3 class="movie-title">{{ movie.title }}</h3>
+          <p class="movie-release-date">Release Date: {{ movie.release_date }}</p>
+          <p class="movie-opening-crawl">{{ movie.opening_crawl | slice:0:200 }}...</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
